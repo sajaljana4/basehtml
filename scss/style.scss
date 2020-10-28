@@ -1,0 +1,202 @@
+
+  *{
+      box-sizing:border-box;
+  }
+
+  body{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+  }
+  h1{
+    font-size: 54px;
+    color: #003065;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0 0 20px;      
+  }
+
+  .clearfix{
+    clear: both;
+    display: block;
+  }
+
+  .img-responsive{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;  
+  }
+
+  .maincontent-zone{
+      padding: 50px 0;
+      .container{
+          width: 98%;
+          max-width: 1200px;
+          margin: 0px auto;
+      }
+  }
+
+  .country-box{
+      margin: 10px 0;
+      clear: both;
+      .innerbox{
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        padding: 25px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+          .dateinfo{
+            width: 250px;
+            display: flex;
+            align-items: baseline;
+            h4{
+                color: #002f69;
+                font-size: 42px;
+                letter-spacing: 1px;
+                padding: 0px 10px;
+                margin: 0;
+                line-height: 1.2;
+                small{
+                    display: block;
+                    font-size: 17px;
+                    text-transform: uppercase;
+
+                }
+            }
+            h4.firstchild{
+                padding-left: 0;
+            }    
+           
+          }
+          .countryinfo{
+              width: calc(100% - 450px);
+              display: flex;
+              .countryflag{   
+                  padding-right: 5px;
+                  width: 80px;
+                  img{
+                      max-width: 100%;
+                      height: auto;
+                      display: inline-block;
+                  }               
+              }
+              .contrybase{
+                  h5{
+                    margin: 0;
+                    padding-left: 8px;
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: #003061;
+                      span{
+                        display: block;
+                        font-size: 15px;
+                        text-transform: none;
+                        letter-spacing: 0.5;
+                      }
+                      small{
+                        display: block;
+                        font-weight: 600;
+                        text-transform: none;
+                        color: #00d286;
+                        font-size: 12px;
+                        margin-top: 5px;
+                      }
+                  }
+              }
+
+          }
+          .buttonzone{
+            width: 200px;
+            text-align: right;
+              a{
+                display: inline-block;
+                color: #fff;
+                background-color: #003061;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                padding: 15px 15px;
+                font-weight: 700;
+                font-size: 12px;                
+                position: relative;
+                transition: 0.2s;
+                span{
+                    color: #fff;
+                    position: relative;
+                    z-index: 9;
+                }
+              }:hover{
+                 background-color: transparent;
+              }
+              a:before{
+                  background-color: #000;
+                  position: absolute;
+                  width: 0%;
+                  height: 100%;
+                  left: 0;
+                  top: 0;
+                  transition: 0.2s;
+                  content: '';
+                  display: block;
+                  z-index: 1;
+              }
+              a:hover:before{
+                  width: 50%;
+              }
+              a:after{
+                background-color: #000;
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                right: 0;
+                top: 0;
+                transition: 0.2s;
+                content: '';
+                display: block;
+                z-index: 1;
+            }
+            a:hover:after{
+                width: 50%;
+            }
+          }
+      }
+  }
+
+  @media only screen and (max-width: 1000px)
+	{
+        h1{
+            text-align: center;
+        }
+        .country-box {
+            .innerbox{
+                align-items: center;
+                flex-direction: column;
+            }
+            .dateinfo{
+                padding-bottom: 10px;
+                border-bottom: 1px dashed #d4d4d4;
+                width: 100% !important;
+                text-align: center;
+                justify-content: center;
+            }
+            .countryinfo{
+                width: 100% !important;
+                text-align: center;
+                justify-content: center;
+                border-bottom: 1px dashed #d4d4d4;
+                padding: 15px 0px 10px;
+                margin-bottom: 10px;
+                .contrybase{
+                    text-align: left;
+                }
+            }
+            .buttonzone{
+                width: 100% !important;
+                text-align: center !important;
+            }
+        } 
+
+    }
+ 

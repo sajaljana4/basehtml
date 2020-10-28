@@ -1,0 +1,20 @@
+{
+  "name": "saas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "node-sass -r scss/ -o build/css",
+    "build": "npm run build:scss",
+    "start": "npm run build:scss && lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "rerun-script": "^0.6.0",
+    "lite-server": "^2.5.4"
+  }
+}
